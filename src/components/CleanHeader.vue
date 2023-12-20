@@ -61,11 +61,13 @@ export default {
                     </li>
                 </ul>
                 <ul class="d-flex align-items-center justify-content-end w-75">
+                    <!-- Ti riporta direttamente alla Home con refresh -->
                     <li><a href="">HOME</a></li>
-                    <li class="px-4"><a href="">ABOUT</a></li>
-                    <li class="px-4"><a href="">SERVICES</a></li>
-                    <li class="px-4"><a href="">PROCESS</a></li>
-                    <li class="px-4"><a href="">TESTIMONIALS</a></li>
+                    <!-- Link che non hanno una pagina di destinazione -->
+                    <li class="px-4"><a href="#about">ABOUT</a></li>
+                    <li class="px-4"><a href="#services">SERVICES</a></li>
+                    <li class="px-4"><a href="#process">PROCESS</a></li>
+                    <li class="px-4"><a href="#testimonials">TESTIMONIALS</a></li>
                     <li><font-awesome-icon class="user px-2" icon="fa-regular fa-user" /></li>
                     <li>
                         <CleanButton text="GET IN TOUCH" />
