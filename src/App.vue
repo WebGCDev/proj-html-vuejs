@@ -1,8 +1,9 @@
 <script>
 import CleanHeader from "./components/CleanHeader.vue"
+import CleanMain from "./components/CleanMain.vue";
 export default {
   name: "App",
-  components: { CleanHeader },
+  components: { CleanHeader, CleanMain },
 };
 </script>
 
@@ -11,7 +12,9 @@ export default {
     <header>
       <CleanHeader />
     </header>
-    <main></main>
+    <main>
+      <CleanMain />
+    </main>
     <footer></footer>
   </div>
 </template>

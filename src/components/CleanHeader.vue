@@ -62,11 +62,11 @@ export default {
                 </ul>
                 <ul class="d-flex align-items-center justify-content-end w-75">
                     <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">SERVICES</a></li>
-                    <li><a href="">PROCESS</a></li>
-                    <li><a href="">TESTIMONIALS</a></li>
-                    <li><font-awesome-icon class="user" icon="fa-regular fa-user" /></li>
+                    <li class="px-4"><a href="">ABOUT</a></li>
+                    <li class="px-4"><a href="">SERVICES</a></li>
+                    <li class="px-4"><a href="">PROCESS</a></li>
+                    <li class="px-4"><a href="">TESTIMONIALS</a></li>
+                    <li><font-awesome-icon class="user px-2" icon="fa-regular fa-user" /></li>
                     <li>
                         <CleanButton text="GET IN TOUCH" />
                     </li>
@@ -124,6 +124,7 @@ export default {
 
 .subtitle {
     font-size: 5rem;
+    text-transform: uppercase;
 }
 
 .jumbotron-description {
