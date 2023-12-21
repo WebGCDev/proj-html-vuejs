@@ -27,12 +27,12 @@ export default {
                     type: 'Light',
                     weight: 'Max Weigh 1200kg',
                 },
-                truck1: {
+                truck2: {
                     img: 'truck-1.png',
                     type: 'Light',
                     weight: 'Max Weigh 1200kg',
                 },
-                truck1: {
+                truck3: {
                     img: 'truck-1.png',
                     type: 'Light',
                     weight: 'Max Weigh 1200kg',
@@ -273,7 +273,11 @@ export default {
                                         <div class="form-group">
                                             <select id="form_need" name="need" class="form-control">
                                                 <option selected disabled value="">More Info <strong
-                                                        class="text-end">></strong></option>
+                                                        class="text-end"></strong></option>
+                                                <option>Request Invoice for order</option>
+                                                <option>Request order status</option>
+                                                <option>Haven't received cashback yet</option>
+                                                <option>Other</option>
                                             </select>
                                         </div>
                                     </div>
@@ -612,9 +616,14 @@ export default {
 
 // CUSTOMERS TESTIMONIALS
 
+
 .feedback {
     background-color: #111117;
     padding: 150px 0;
+
+    img {
+        filter: brightness(0) invert(1);
+    }
 
     h5 {
         color: #00A698;
@@ -647,8 +656,6 @@ export default {
 
 
         img {
-            filter: brightness(100%);
-
             margin: 20px 0 20px 30px;
         }
 
@@ -670,6 +677,19 @@ export default {
 }
 
 // SEND A MESSAGE
+
+input {
+    background-color: #ececec;
+}
+
+option {
+    background-color: #ececec;
+}
+
+textarea {
+    background-color: #ececec;
+}
+
 .send-message {
     h5 {
         color: #00A6A6;
