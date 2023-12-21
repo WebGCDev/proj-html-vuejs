@@ -1,60 +1,275 @@
 <script>
 import Vehicle from './Vehicle.vue';
+import CleanButton from './CleanButton.vue'
+import CleanLogo from './CleanLogo.vue';
+import SendAMessage from './SendAMessage.vue'
+import allinformation from '../allinformation';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+library.add(faPhone, faEnvelope);
 export default {
     name: "CleanMain",
     componets: {
         Vehicle,
+        CleanButton,
+        FontAwesomeIcon,
+        SendAMessage,
+        CleanLogo,
     },
-};
+    data() {
+        return {};
+    },
+}
 </script>
 
 <template>
-    <section class="who-we-are">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 title">
-                    <h5>WHO WE ARE</h5>
-                    <h1>Excellence in Transport</h1>
-                    <p class="py-2 text-secondary">
-                        The framework used in the Excellence Programme has been developed by the sector, for the sector.
-                        Application of this framework highlights the relationships between the drivers of performance
-                        and the desired results, with a strong focus on community outcomes and the delivery of benefits.
-                    </p>
-                    <p class="py-3 text-secondary">
-                        The Excellence Programme supports longer term investment confidence and will support an
-                        organisation to meet Local Government, Waka Kotahi NZ Transport Agency, ISO standards and IIMM
-                        requirements.
-                    </p>
-                    <p class="py-3 important-text">
-                        This framework will help an organisation enable a step change in transport sector capability,
-                        provide leadership in improvement of transport outcomes, and shift the culture of transport
-                        investment to proactively address future challenges and improve decision making around wellbeing
-                        outcomes.
-                    </p>
-                    <p class="py-3 text-secondary">
-                        The Excellence Programme helps organisations identify potential problems and undertake necessary
-                        improvements to get back on track.
-                    </p>
-                    <ul class="text-secondary">
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor sit amet</li>
-                        <li>Lorem ipsum dolor sit amet</li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <h5>Vehicle Types</h5>
-                    <VehicleTypes />
+    <div>
+        <!-- WHO WE ARE -->
+        <section class="who-we-are">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 title">
+                        <h5 class="presentation">WHO WE ARE</h5>
+                        <h1>Excellence in Transport</h1>
+                        <p class="py-2 text-secondary">
+                            The framework used in the Excellence Programme has been developed by the sector, for the sector.
+                            Application of this framework highlights the relationships between the drivers of performance
+                            and the desired results, with a strong focus on community outcomes and the delivery of benefits.
+                        </p>
+                        <p class="py-3 text-secondary">
+                            The Excellence Programme supports longer term investment confidence and will support an
+                            organisation to meet Local Government, Waka Kotahi NZ Transport Agency, ISO standards and IIMM
+                            requirements.
+                        </p>
+                        <p class="py-3 important-text">
+                            This framework will help an organisation enable a step change in transport sector capability,
+                            provide leadership in improvement of transport outcomes, and shift the culture of transport
+                            investment to proactively address future challenges and improve decision making around wellbeing
+                            outcomes.
+                        </p>
+                        <p class="py-3 text-secondary">
+                            The Excellence Programme helps organisations identify potential problems and undertake necessary
+                            improvements to get back on track.
+                        </p>
+                        <ul class="text-secondary">
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h5>Vehicle Types</h5>
+                        <Vehicle />
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- ROAD TRANSPORT -->
+        <section class="sect-road-transport ">
+
+
+            <div class="cont-road-transport">
+                <span class="presentation">ROAD TRANSPORT</span>
+
+                <h2>Main <span>Services</span></h2>
+                <div class="subparagraph d-flex align-items-center justify-content-between">
+                    <p>
+                        With all of this expertise and capability comes an unrivalled commitment to customer
+                        service.We
+                        will work hard to undersand your needs in order to develop a productive, long-term
+                        partnership.
+                    </p>
+                    <button>see all</button>
+                </div>
+                <div class=" row-box">
+                    <div class="cont-box ">
+                        <h4>Technology</h4>
+                        <p>We are continually focused on developing technology solutions adapted to our client's needs.</p>
+                        <a href="#">→</a>
+                    </div>
+                    <div class="cont-box ">
+                        <h4>Reefer Cargo</h4>
+                        <p>Regular and frequent monitoring from the receipt of the loaded container to final destination.
+                        </p>
+                        <a href="#">→</a>
+                    </div>
+                    <div class="cont-box">
+                        <h4>Dry Cargo</h4>
+                        <p>We work with most types of dry cargo, from valuable cargo to the most dangerous requiring care.
+                        </p>
+                        <a href="#">→</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HOW IT WORKS IN PRACTICE -->
+        <section id="process" class="logistical pt-5">
+            <div class="row justify-content-center">
+                <div class="col-8 text-center">
+                    <h5>How it Works in practice</h5>
+                    <h1>Logistical Procedure</h1>
+                    <p>
+                        We Work with innovative methodologies to ensure that the entire
+                        delivery process is done from start to finish as planned.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-2">
+                    <h5>Collection of information</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <div class="col-2">
+                    <h5>Service Invoice Sending</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <div class="col-2">
+                    <h5>Withdrawal of Cargo</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <div class="col-2">
+                    <h5>Transport Customer Order</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <div class="col-2">
+                    <h5>Successful Delivery</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+            </div>
+        </section>
+        <!-- WHAT ARE WE DOING SECTION -->
+        <section id="testimonials" class="results text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5>What are we doing</h5>
+                        <h1>Results in Numbers</h1>
+                    </div>
+                    <div class="row pt-5 text-center">
+                        <div class="col-3">
+                            <h3>128</h3>
+                            <p>Certifications</p>
+                        </div>
+                        <div class="col-3">
+                            <h3>230</h3>
+                            <p>Employees</p>
+                        </div>
+                        <div class="col-3">
+                            <h3>517</h3>
+                            <p>Customers</p>
+                        </div>
+                        <div class="col-3">
+                            <h3>94</h3>
+                            <p>Countries Served</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CUSTOMERS TESTIMONIALS -->
+        <section class="feedback bg-dark text-white">
+            <div class="container pt-5">
+                <div class="row justify-content-center">
+                    <div class="col-8 text-center">
+                        <h5>Curstomer testimonials</h5>
+                        <h1>Trusted Feedback</h1>
+                        <p>
+                            We Work intensively in search of ideals that can add up in the
+                            lives of our curstomers. This is what moves us and we are grateful
+                            for the recognition.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col p-2 feedback-card">
+                        <img src="../../src/assets/Images/logo-1.png" alt="WooCommerce" />
+                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan
+                            orci rhoncus at pellentesque.
+                            Lorem ipsum solor sit amet, consectetur adipiscing elit
+                        </p>
+                    </div>
+                    <div class="col mx-3 p-2 feedback-card">
+                        <img src="../../src/assets/Images/logo-2.png" alt="WordPress" />
+                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan
+                            orci rhoncus at pellentesque.
+                            Lorem ipsum solor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                    <div class="col p-2 feedback-card">
+                        <img src="../../src/assets/Images/logo-3.png" alt="Pingdom" />
+                        <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan
+                            orci rhoncus at pellentesque.
+                            Lorem ipsum solor sit amet, consectetur adipiscing elit</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SEND A MESSAGE CONTACT -->
+        <section class="send-message">
+            <div class="container pt-5">
+                <div class="row">
+                    <CleanForm />
+                    <div class="col-5">
+                        <ul>
+                            <li>
+                                <h4>Example Inc.</h4>
+                            </li>
+                            <li class="py-2">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            </li>
+                            <li class="py-1">
+                                <p>Praesent diam lacus, dapibus sed imperdiet consectetur</p>
+                            </li>
+                            <li class="py-3">
+                                <font-awesome-icon class="phone px-2" icon="fa-solid fa-phone" />
+                                <span>{{ phone }}</span>
+                            </li>
+                            <li class="py-3">
+                                <font-awesome-icon class="mail px-2" icon="fa-solid fa-envelope" />
+                                <span>{{ mail }}</span>
+                            </li>
+                            <li class="py-3">
+                                <font-awesome-icon class="street px-2" icon="fa-solid fa-envelope" />
+                                <span>{{ street }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- NEXGEN ABOUT-TRANSPORT-SUPPORT -->
+        <section class="footer bg-dark py-5 text-white">
+            <div class="container">
+                <div class="">
+                    <div class="col-3">
+                        <ul>
+                            <li>
+                                <CleanLogo />
+                            </li>
+                            <li>A Functional HTML Template for Corporate & Business.</li>
+                            <li>{{ phone }}</li>
+                            <li>{{ mail }}</li>
+                            <li>{{ street }}</li>
+                            <li>
+                                <CleanButton />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3">A</div>
+                    <div class="col-3">A</div>
+                    <div class="col-3">A</div>
+                </div>
+            </div>
+        </section>
+    </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .who-we-are {
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .important-text {
@@ -62,5 +277,122 @@ export default {
     padding-left: 20px;
     font-style: italic;
     color: grey;
+}
+
+
+
+.results {
+    background-image: url("/src/assets/Images/bg-10.jpg");
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 200px;
+}
+
+.feedback-card {
+    background-color: #69696d;
+    width: calc(90% / 3);
+}
+
+.title ul {
+    list-style: disc;
+}
+
+.phone {
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.mail {
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.street {
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.form-color {
+    background-color: #ececec;
+}
+
+// Road Transport
+.sect-road-transport {
+    background-color: #111117;
+    color: #b6c3bf;
+
+    .presentation {
+        color: #52bbbb;
+        font-size: 14px;
+        font-weight: 600;
+
+    }
+
+    h2 {
+        color: white;
+        font-weight: 800;
+        margin: 20px 0;
+
+        span {
+            background-color: #0e272d;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+    }
+
+    .cont-road-transport {
+        width: 50%;
+        margin: 0 auto;
+        padding: 100px 0;
+
+        .subparagraph {
+            margin-bottom: 20px;
+
+            p {
+                width: 80%;
+            }
+
+            button {
+                text-transform: uppercase;
+                background-color: transparent;
+                color: white;
+                border: 1px solid #058283;
+                padding: 10px 25px;
+                border-radius: 8px;
+            }
+        }
+
+
+
+        .row-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            .cont-box {
+                background-color: #19191f;
+                border-radius: 10px;
+                padding: 40px;
+                position: relative;
+
+
+                h4 {
+                    font-size: 24px;
+                    color: white;
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    color: #0f4e51;
+                    font-size: 40px;
+                    text-decoration: none;
+                    position: absolute;
+                    top: 0;
+                    right: 20px;
+                }
+            }
+        }
+
+    }
 }
 </style>

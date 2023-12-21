@@ -21,4 +21,8 @@ export default {
 
 <style lang="scss">
 @use "./assets/style.scss" as *;
+
+ul {
+  list-style: none;
+}
 </style>
