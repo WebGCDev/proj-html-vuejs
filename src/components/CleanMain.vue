@@ -7,6 +7,7 @@ import allinformation from '../allinformation';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 library.add(faPhone, faEnvelope);
 export default {
     name: "CleanMain",
@@ -175,12 +176,12 @@ export default {
             </div>
         </section>
         <!-- CUSTOMERS TESTIMONIALS -->
-        <section class="feedback bg-dark text-white">
-            <div class="container pt-5">
+        <section class="feedback  text-white">
+            <div class="container ">
                 <div class="row justify-content-center">
                     <div class="col-8 text-center">
-                        <h5>Curstomer testimonials</h5>
-                        <h1>Trusted Feedback</h1>
+                        <h5>Customer testimonials</h5>
+                        <h1>Trusted <span>Feedback</span></h1>
                         <p>
                             We Work intensively in search of ideals that can add up in the
                             lives of our curstomers. This is what moves us and we are grateful
@@ -195,18 +196,21 @@ export default {
                             orci rhoncus at pellentesque.
                             Lorem ipsum solor sit amet, consectetur adipiscing elit
                         </p>
+                        <span>"</span>
                     </div>
                     <div class="col mx-3 p-2 feedback-card">
                         <img src="../../src/assets/Images/logo-2.png" alt="WordPress" />
                         <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan
                             orci rhoncus at pellentesque.
                             Lorem ipsum solor sit amet, consectetur adipiscing elit</p>
+                        <span>"</span>
                     </div>
                     <div class="col p-2 feedback-card">
                         <img src="../../src/assets/Images/logo-3.png" alt="Pingdom" />
                         <p>Praesent volutpat justo sit amet elementum malesuada. Praesent sagittis augue justo, in accumsan
                             orci rhoncus at pellentesque.
                             Lorem ipsum solor sit amet, consectetur adipiscing elit</p>
+                        <span>"</span>
                     </div>
                 </div>
             </div>
@@ -357,10 +361,7 @@ export default {
 
 }
 
-.feedback-card {
-    background-color: #69696d;
-    width: calc(90% / 3);
-}
+
 
 .title ul {
     list-style: disc;
@@ -530,6 +531,65 @@ export default {
         }
 
 
+
+    }
+}
+
+// CUSTOMERS TESTIMONIALS
+
+.feedback {
+    background-color: #111117;
+    padding: 150px 0;
+
+    h5 {
+        color: #00A698;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-weight: 800;
+        padding: 20px 0;
+
+        span {
+            background-color: rgba($color: #1b4752, $alpha: 0.5);
+            padding: 5px 20px;
+            border-radius: 10px;
+        }
+    }
+
+    p {
+        color: rgb(161, 161, 161);
+        padding-bottom: 20px;
+    }
+
+    .feedback-card {
+        background-color: #19191F;
+        width: calc(90% / 3);
+        border-radius: 15px;
+        position: relative;
+
+
+        img {
+            filter: brightness(100%);
+
+            margin: 20px 0 20px 30px;
+        }
+
+        p {
+            color: rgb(161, 161, 161);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        span {
+            font-size: 50px;
+            color: #47474C;
+            position: absolute;
+            bottom: 0px;
+            right: 20px;
+        }
 
     }
 }

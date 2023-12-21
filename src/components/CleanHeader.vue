@@ -4,10 +4,12 @@ import allinformation from '../allinformation'
 import CleanLogo from './CleanLogo.vue'
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 import {
     faPhone,
     faEnvelope,
     faClock,
+
 } from "@fortawesome/free-solid-svg-icons";
 import {
     faUser,
