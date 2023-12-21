@@ -148,30 +148,30 @@ export default {
         <!-- WHAT ARE WE DOING SECTION -->
         <section id="testimonials" class="results text-white">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h5>What are we doing</h5>
-                        <h1>Results in Numbers</h1>
+
+                <div class="title">
+                    <h5>What are we doing</h5>
+                    <h1><span>Results</span> in Numbers</h1>
+                </div>
+                <div class="content-info row pt-5 text-center">
+                    <div class="col-3">
+                        <h3>128</h3>
+                        <p>Certifications</p>
                     </div>
-                    <div class="row pt-5 text-center">
-                        <div class="col-3">
-                            <h3>128</h3>
-                            <p>Certifications</p>
-                        </div>
-                        <div class="col-3">
-                            <h3>230</h3>
-                            <p>Employees</p>
-                        </div>
-                        <div class="col-3">
-                            <h3>517</h3>
-                            <p>Customers</p>
-                        </div>
-                        <div class="col-3">
-                            <h3>94</h3>
-                            <p>Countries Served</p>
-                        </div>
+                    <div class="col-3">
+                        <h3>230</h3>
+                        <p>Employees</p>
+                    </div>
+                    <div class="col-3">
+                        <h3>517</h3>
+                        <p>Customers</p>
+                    </div>
+                    <div class="col-3">
+                        <h3>94</h3>
+                        <p>Countries Served</p>
                     </div>
                 </div>
+
             </div>
         </section>
         <!-- CUSTOMERS TESTIMONIALS -->
@@ -262,9 +262,27 @@ export default {
                             </li>
                         </ul>
                     </div>
-                    <div class="col-3">A</div>
-                    <div class="col-3">A</div>
-                    <div class="col-3">A</div>
+                    <div class="col-3">About >The Company >Institutional >Social & Events >Innovation >Environment
+                        >Technology
+                    </div>
+                    <div class="col-3">Transport >Industrialized >Chemicals >Packaged >Liquids >Construction >Laminated Wook
+                        >And
+                        others</div>
+                    <div class="col-3">Responsibility >Terms of Use >About Cookies >Privacy Policy >Accessibility
+                        >Information
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CREDITS FINAL -->
+        <section>
+            <div id="fixed_footer">
+                <div class="container">
+                    <div id="credits">
+                        <p class="grey">Enjoy the low price. We are tracking any intention of piracy</p>
+                        <p class="grey"><i class="far fa-copyright"></i>2020 NEXGEN is Proudly powered by <span
+                                class="green">Coding</span></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -285,12 +303,58 @@ export default {
 }
 
 
-
+// WHAT ARE WE DOING SECTION 
 .results {
     background-image: url("/src/assets/Images/bg-10.jpg");
     background-size: cover;
+    background-position-y: center;
     padding-top: 80px;
     padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+
+        .title {
+
+            h5 {
+                color: #00A6A6;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            h1 {
+                text-align: center;
+                font-weight: 800;
+                margin-top: 30px;
+
+                span {
+                    background-color: rgba($color: #214850, $alpha: 0.5);
+                    padding: 10px 20px;
+                    border-radius: 5px;
+
+                }
+            }
+        }
+
+        .content-info {
+            h3 {
+                color: #00A6A6;
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 30px;
+            }
+        }
+    }
+
 }
 
 .feedback-card {
@@ -468,5 +532,27 @@ export default {
 
 
     }
+}
+
+//CREDITS FINAL
+
+#credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: #c0c3d0;
+}
+
+#fixed_footer p {
+    font-size: .7rem;
+}
+
+#fixed_footer {
+    display: flex;
+    justify-content: center;
+    max-height: 80px;
+    padding: 10px 0;
+    background-color: black;
 }
 </style>
