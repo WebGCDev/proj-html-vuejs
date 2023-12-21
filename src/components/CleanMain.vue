@@ -6,9 +6,9 @@ import SendAMessage from './SendAMessage.vue'
 import allinformation from '../allinformation';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope, faGem } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faPhone, faEnvelope);
+library.add(faPhone, faEnvelope, faGem);
 export default {
     name: "CleanMain",
     componets: {
@@ -29,13 +29,13 @@ export default {
                 },
                 truck2: {
                     img: 'truck-1.png',
-                    type: 'Light',
-                    weight: 'Max Weigh 1200kg',
+                    type: 'Medium',
+                    weight: 'Max Weigh 6000kg',
                 },
                 truck3: {
                     img: 'truck-1.png',
-                    type: 'Light',
-                    weight: 'Max Weigh 1200kg',
+                    type: 'Heavy',
+                    weight: 'Max Weigh 2400kg',
                 },
             }
         };
@@ -45,11 +45,12 @@ export default {
 
 <template>
     <div>
-        <!-- WHO WE ARE -->
+
         <section class="who-we-are">
             <div class="container">
                 <div class="row">
                     <div class="col-8 title">
+                        <font-awesome-icon icon="gem" />
                         <h5 class="presentation">WHO WE ARE</h5>
                         <h1>Excellence in Transport</h1>
                         <p class="py-2 text-secondary">
@@ -80,14 +81,38 @@ export default {
                             <li>Lorem ipsum dolor sit amet</li>
                         </ul>
                     </div>
-                    <div v-for="auto in    vechicleTypes   " class="col-4">
-                        <div class="cont-img">
-                            <img :src="`../../src/assets/Images/${auto.img}`" alt="truck">
-                            <img src="../../src/assets/Images/truck-1.png" alt="">
+                    <div class="col-4">
+
+                        <div v-for="auto in    vechicleTypes   " class="row">
+                            <div class="col-6">
+                                <div class="cont-img">
+                                    <img :src="`../../src/assets/Images/${auto.img}`" alt="truck">
+
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <h5>{{ auto.type }}</h5>
+                                <p>{{ auto.weight }}</p>
+                            </div>
+                            <hr />
                         </div>
-                        <h5>{{ auto.type }}</h5>
-                        <p></p>
+                        <!-- INSERIRE CERTIFICATI -->
+                        <!-- <div class="row">
+                            <div class="col-12">
+                                Certifications
+                            </div>
+                            <div class="col-6">
+                                certificato 1
+                            </div>
+                            <div class="col-6">
+                                certificato 2
+                            </div>
+                        </div> -->
+
+
                     </div>
+
+
 
 
                 </div>
@@ -272,8 +297,8 @@ export default {
                                     <div class="col-md-6 py-3">
                                         <div class="form-group">
                                             <select id="form_need" name="need" class="form-control">
-                                                <option selected disabled value="">More Info <strong
-                                                        class="text-end"></strong></option>
+                                                <option selected value="">More Info <strong class="text-end"></strong>
+                                                </option>
                                                 <option>Request Invoice for order</option>
                                                 <option>Request order status</option>
                                                 <option>Haven't received cashback yet</option>
@@ -328,7 +353,7 @@ export default {
             </div>
         </section>
         <!-- NEXGEN ABOUT-TRANSPORT-SUPPORT -->
-        <section class="footer bg-dark py-5 text-white">
+        <!-- <section class="footer bg-dark py-5 text-white">
             <div class="container">
                 <div class="">
                     <div class="col-3">
@@ -356,7 +381,7 @@ export default {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- CREDITS FINAL -->
         <section>
             <div id="fixed_footer">
@@ -373,6 +398,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+// WHO WE ARE
+.cont-img {
+    img {
+        width: 100%;
+    }
+}
+
 .who-we-are {
     padding-top: 100px;
     padding-bottom: 100px;
