@@ -4,20 +4,7 @@ export default {
     components: {},
     data() {
         return {
-            vehicleTypes: [
-                {
-                    type: "Light",
-                    weight: "Max Weight 1200 Kg"
-                },
-                {
-                    type: "Medium",
-                    weight: "Max Weight 6000 Kg"
-                },
-                {
-                    type: "Heavy",
-                    weight: "Max Weight 24000 Kg"
-                }
-            ]
+
         };
     },
 };
@@ -25,8 +12,8 @@ export default {
 
 <template>
     <div>
-        <div class="border-bottom pt-2" v-for="(vehicle, i) in vehicleTypes">
-            ciao
+        <div class="border-bottom pt-2" v-for="(vehicle, index) in vehicleTypes" :key="index">
+            {{ vehicle.type }}
         </div>
 
         <div class="mt-4">

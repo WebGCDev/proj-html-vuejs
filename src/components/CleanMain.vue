@@ -19,7 +19,26 @@ export default {
         CleanLogo,
     },
     data() {
-        return {};
+        return {
+            allinformation,
+            vechicleTypes: {
+                truck1: {
+                    img: 'truck-1.png',
+                    type: 'Light',
+                    weight: 'Max Weigh 1200kg',
+                },
+                truck1: {
+                    img: 'truck-1.png',
+                    type: 'Light',
+                    weight: 'Max Weigh 1200kg',
+                },
+                truck1: {
+                    img: 'truck-1.png',
+                    type: 'Light',
+                    weight: 'Max Weigh 1200kg',
+                },
+            }
+        };
     },
 }
 </script>
@@ -61,10 +80,16 @@ export default {
                             <li>Lorem ipsum dolor sit amet</li>
                         </ul>
                     </div>
-                    <div class="col-4">
-                        <h5>Vehicle Types</h5>
-                        <Vehicle />
+                    <div v-for="auto in    vechicleTypes   " class="col-4">
+                        <div class="cont-img">
+                            <img :src="`../../src/assets/Images/${auto.img}`" alt="truck">
+                            <img src="../../src/assets/Images/truck-1.png" alt="">
+                        </div>
+                        <h5>{{ auto.type }}</h5>
+                        <p></p>
                     </div>
+
+
                 </div>
             </div>
         </section>
@@ -219,8 +244,54 @@ export default {
         <section class="send-message">
             <div class="container pt-5">
                 <div class="row">
-                    <CleanForm />
-                    <div class="col-5">
+                    <div class="col-7 my-5">
+                        <h5 class="presentation">SEND A MESSAGE</h5>
+                        <h1 class="py-3">Get in <span>Touch</span></h1>
+                        <p class="py-3">We will respond to your message as soon as possible.</p>
+
+                        <form role="form">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" placeholder="Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="email" class="form-control" placeholder="Email" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 py-3">
+                                        <div class="form-group">
+                                            <input type="phone" name="phone" class="form-control" placeholder="Phone" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 py-3">
+                                        <div class="form-group">
+                                            <select id="form_need" name="need" class="form-control">
+                                                <option selected disabled value="">More Info <strong
+                                                        class="text-end">></strong></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Message" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 py-3">
+                                        <input type="submit" class="btn btn-success btn-send pt-2 btn-block" value="Send" />
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="example col-5">
                         <ul>
                             <li>
                                 <h4>Example Inc.</h4>
@@ -232,18 +303,22 @@ export default {
                                 <p>Praesent diam lacus, dapibus sed imperdiet consectetur</p>
                             </li>
                             <li class="py-3">
-                                <font-awesome-icon class="phone px-2" icon="fa-solid fa-phone" />
-                                <span>{{ phone }}</span>
+
+                                <span>+ 1 (305 1234-5678)</span>
                             </li>
                             <li class="py-3">
-                                <font-awesome-icon class="mail px-2" icon="fa-solid fa-envelope" />
-                                <span>{{ mail }}</span>
+
+                                <span>hello@example.com</span>
                             </li>
                             <li class="py-3">
-                                <font-awesome-icon class="street px-2" icon="fa-solid fa-envelope" />
-                                <span>{{ street }}</span>
+
+                                <span>Main Avenue, 987</span>
+                            </li>
+                            <li>
+                                <button>VIEW MAP</button>
                             </li>
                         </ul>
+
                     </div>
                 </div>
             </div>
@@ -591,6 +666,49 @@ export default {
             right: 20px;
         }
 
+    }
+}
+
+// SEND A MESSAGE
+.send-message {
+    h5 {
+        color: #00A6A6;
+    }
+
+    h1 {
+        font-size: 50px;
+        font-weight: 800;
+
+        span {
+            background-color: #DAECED;
+            color: #058283;
+            padding: 5px 15px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.example {
+    li {
+
+        p {
+            font-size: 22px;
+            color: grey;
+        }
+
+        span {
+            color: #058283;
+            font-size: 22px;
+
+        }
+
+        button {
+            background-color: transparent;
+            border: 1px solid #058283;
+            padding: 10px 20px;
+            color: #058283;
+            border-radius: 5px;
+        }
     }
 }
 
