@@ -106,35 +106,40 @@ export default {
             </div>
         </section>
         <!-- HOW IT WORKS IN PRACTICE -->
-        <section id="process" class="logistical pt-5">
+        <section id="process" class="logistical ">
             <div class="row justify-content-center">
-                <div class="col-8 text-center">
+                <div class="cont-practice col-8 text-center">
                     <h5>How it Works in practice</h5>
-                    <h1>Logistical Procedure</h1>
+                    <h1><span>Logistical</span> Procedure</h1>
                     <p>
                         We Work with innovative methodologies to ensure that the entire
                         delivery process is done from start to finish as planned.
                     </p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-2">
+            <div class="cont-timeline row justify-content-center">
+                <div class="col-2 cont-elem-timeline">
+                    <button>01</button>
                     <h5>Collection of information</h5>
                     <p>Lorem ipsum dolor sit amet consectetur</p>
                 </div>
-                <div class="col-2">
+                <div class="col-2 cont-elem-timeline">
+                    <button>02</button>
                     <h5>Service Invoice Sending</h5>
                     <p>Lorem ipsum dolor sit amet consectetur</p>
                 </div>
-                <div class="col-2">
+                <div class="col-2 cont-elem-timeline">
+                    <button>03</button>
                     <h5>Withdrawal of Cargo</h5>
                     <p>Lorem ipsum dolor sit amet consectetur</p>
                 </div>
-                <div class="col-2">
+                <div class="col-2 cont-elem-timeline">
+                    <button>04</button>
                     <h5>Transport Customer Order</h5>
                     <p>Lorem ipsum dolor sit amet consectetur</p>
                 </div>
-                <div class="col-2">
+                <div class="col-2 cont-elem-timeline">
+                    <button>05</button>
                     <h5>Successful Delivery</h5>
                     <p>Lorem ipsum dolor sit amet consectetur</p>
                 </div>
@@ -362,8 +367,6 @@ export default {
             }
         }
 
-
-
         .row-box {
             display: flex;
             justify-content: space-between;
@@ -392,6 +395,77 @@ export default {
                 }
             }
         }
+
+    }
+}
+
+// PRACTICE
+
+.logistical {
+    padding: 100px 0;
+    background-color: #EEF4ED;
+
+    .cont-practice {
+        h5 {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #3EABAB;
+            padding: 10px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-weight: 800;
+            margin-top: 20px;
+
+            span {
+                background-color: #CCE3DE;
+                padding: 5px 10px;
+                color: #058283;
+                border-radius: 5px;
+            }
+        }
+
+        p {
+            font-size: 15px;
+            color: rgb(107, 107, 107);
+            margin-top: 20px;
+        }
+    }
+
+    .cont-timeline {
+        text-align: center;
+        border-top: 5px solid #CCE3DE;
+        position: relative;
+        margin-top: 50px;
+
+
+        button {
+            color: #058283;
+            border-radius: 50%;
+            padding: 10px;
+            background-color: #DAECED;
+            border: none;
+            font-weight: 800;
+            position: absolute;
+            top: -25px;
+
+        }
+
+        h5 {
+            margin-top: 50px;
+            font-size: 28px;
+            font-weight: 700;
+            width: 80%;
+            margin: 50px auto 20px;
+        }
+
+        p {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+
 
     }
 }
