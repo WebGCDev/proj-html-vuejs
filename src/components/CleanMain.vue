@@ -20,7 +20,7 @@ export default {
     },
     data() {
         return {
-            allinformation,
+            ...allinformation,
             vechicleTypes: {
                 truck1: {
                     img: 'truck-1.png',
@@ -35,22 +35,21 @@ export default {
                 truck3: {
                     img: 'truck-1.png',
                     type: 'Heavy',
-                    weight: 'Max Weigh 2400kg',
+                    weight: 'Max Weigh 24000kg',
                 },
             }
         };
     },
 }
 </script>
-
+<!-- WHO WE ARE -->
 <template>
     <div>
-
         <section class="who-we-are">
             <div class="container">
                 <div class="row">
                     <div class="col-8 title">
-                        <font-awesome-icon icon="gem" />
+                        <!-- <font-awesome-icon icon="gem" /> -->
                         <h5 class="presentation">WHO WE ARE</h5>
                         <h1>Excellence in Transport</h1>
                         <p class="py-2 text-secondary">
@@ -82,16 +81,15 @@ export default {
                         </ul>
                     </div>
                     <div class="col-4">
-
+                        <p class="veh-ty">Vehicle Type</p>
                         <div v-for="auto in    vechicleTypes   " class="row">
                             <div class="col-6">
                                 <div class="cont-img">
                                     <img :src="`../../src/assets/Images/${auto.img}`" alt="truck">
-
                                 </div>
                             </div>
                             <div class="col-6">
-                                <h5>{{ auto.type }}</h5>
+                                <h4>{{ auto.type }}</h4>
                                 <p>{{ auto.weight }}</p>
                             </div>
                             <hr />
@@ -388,7 +386,7 @@ export default {
                 <div class="container">
                     <div id="credits">
                         <p class="grey">Enjoy the low price. We are tracking any intention of piracy</p>
-                        <p class="grey"><i class="far fa-copyright"></i>2020 NEXGEN is Proudly powered by <span
+                        <p class="grey"><i class="far fa-copyright"></i>© 2020 NEXGEN is Proudly powered by <span
                                 class="green">Coding</span></p>
                     </div>
                 </div>
@@ -399,15 +397,28 @@ export default {
 
 <style lang="scss" scoped>
 // WHO WE ARE
+
+.veh-ty {
+    font-weight: 600;
+    font-size: 25px;
+
+
+}
+
 .cont-img {
     img {
-        width: 100%;
+        width: 60%;
+        background-color: #daeced;
     }
 }
 
 .who-we-are {
     padding-top: 100px;
     padding-bottom: 100px;
+
+    h5 {
+        color: #00A6A6;
+    }
 }
 
 .important-text {
@@ -418,86 +429,7 @@ export default {
 }
 
 
-// WHAT ARE WE DOING SECTION 
-.results {
-    background-image: url("/src/assets/Images/bg-10.jpg");
-    background-size: cover;
-    background-position-y: center;
-    padding-top: 80px;
-    padding-bottom: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .container {
-        width: 80%;
-        margin: 0 auto;
-
-        .title {
-
-            h5 {
-                color: #00A6A6;
-                text-transform: uppercase;
-                text-align: center;
-            }
-
-            h1 {
-                text-align: center;
-                font-weight: 800;
-                margin-top: 30px;
-
-                span {
-                    background-color: rgba($color: #214850, $alpha: 0.5);
-                    padding: 10px 20px;
-                    border-radius: 5px;
-
-                }
-            }
-        }
-
-        .content-info {
-            h3 {
-                color: #00A6A6;
-                font-size: 40px;
-                font-weight: 700;
-            }
-
-            p {
-                font-weight: 600;
-                font-size: 30px;
-            }
-        }
-    }
-
-}
-
-
-
-.title ul {
-    list-style: disc;
-}
-
-.phone {
-    background-color: aqua;
-    border-radius: 50%;
-}
-
-.mail {
-    background-color: aqua;
-    border-radius: 50%;
-}
-
-.street {
-    background-color: aqua;
-    border-radius: 50%;
-}
-
-.form-color {
-    background-color: #ececec;
-}
-
-// Road Transport
+// ROAD TRANSPORT
 .sect-road-transport {
     background-color: #111117;
     color: #b6c3bf;
@@ -523,7 +455,7 @@ export default {
 
     .cont-road-transport {
         width: 50%;
-        margin: 0 auto;
+        margin: 0 315px;
         padding: 100px 0;
 
         .subparagraph {
@@ -575,7 +507,8 @@ export default {
     }
 }
 
-// PRACTICE
+
+// HOW IT WORKS IN PRACTICE
 
 .logistical {
     padding: 100px 0;
@@ -645,6 +578,62 @@ export default {
 
     }
 }
+
+// WHAT ARE WE DOING SECTION 
+.results {
+    background-image: url("/src/assets/Images/bg-10.jpg");
+    background-size: cover;
+    background-position-y: center;
+    padding-top: 80px;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+
+        .title {
+
+            h5 {
+                color: #00A6A6;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            h1 {
+                text-align: center;
+                font-weight: 800;
+                margin-top: 30px;
+
+                span {
+                    background-color: rgba($color: #214850, $alpha: 0.5);
+                    padding: 10px 20px;
+                    border-radius: 5px;
+
+                }
+            }
+        }
+
+        .content-info {
+            h3 {
+                color: #00A6A6;
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 30px;
+            }
+        }
+    }
+
+}
+
+
 
 // CUSTOMERS TESTIMONIALS
 
@@ -772,6 +761,10 @@ textarea {
     align-items: center;
     padding: 0 10px;
     color: #c0c3d0;
+
+    .green {
+        color: #00A6A6;
+    }
 }
 
 #fixed_footer p {
@@ -784,5 +777,31 @@ textarea {
     max-height: 80px;
     padding: 10px 0;
     background-color: black;
+}
+
+
+//EXAMPLE INC.
+
+.title ul {
+    list-style: disc;
+}
+
+.phone {
+    background-color: #daeced;
+    border-radius: 50%;
+}
+
+.mail {
+    background-color: #daeced;
+    border-radius: 50%;
+}
+
+.street {
+    background-color: #daeced;
+    border-radius: 50%;
+}
+
+.form-color {
+    background-color: #ececec;
 }
 </style>
